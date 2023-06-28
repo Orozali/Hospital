@@ -6,6 +6,6 @@ RUN ./mvnw clean package -DskipTests
 
 FROM openjdk:19
 WORKDIR /app
-COPY --from=build /app/target/Hospital-0.0.1-SNAPSHOT.jar .
-CMD ["java", "-jar", "Hospital-0.0.1-SNAPSHOT.jar"]
+COPY --from=build /app/target/springBootHospital-0.0.1-SNAPSHOT.jar .
+CMD ["java", "-jar", "springBootHospital-0.0.1-SNAPSHOT.jar"]
 EXPOSE 8080
